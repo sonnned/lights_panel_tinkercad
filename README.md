@@ -24,3 +24,10 @@ git add <cambio> # stage cambio
 git commit -m "mensaje" # commit cambio
 git push origin <rama> # push cambio
 ```
+## ToDo
+Por cada problema hacer:
+- [ ] Análizar el problema
+- [ ] Considerar una posible solución
+- [ ] Implementar los algoritmos necesarios para que la solución funcione
+- [ ] Describir los problemas que sucedieron durante el desarrollo de la solución
+- [ ] Cada vez que la solución ***(algoritmos)*** son optimizados describir por qué es mejor y como se llegó a la solución
