@@ -11,5 +11,7 @@ int main()
 
     fill_matrix(matrix, size);
 
+    create_fourth_pattern(matrix, size);
+
     print_led_matrix(matrix, size);
 }
