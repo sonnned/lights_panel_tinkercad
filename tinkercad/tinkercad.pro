@@ -5,7 +5,9 @@ CONFIG -= qt
 
 SOURCES += \
         main.cpp \
+        modify.cpp \
         patterns.cpp
 
 HEADERS += \
+    modify.h \
     patterns.h
