@@ -30,8 +30,5 @@ int main()
 
     fill_matrix(matrix, size);
 
-    create_first_pattern(matrix, size);
-
-
     print_led_matrix(matrix, size);
 }
