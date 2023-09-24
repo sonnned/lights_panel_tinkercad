@@ -190,21 +190,6 @@ void create_sweep_pattern() {
     }
 }
 
-void create_diagonal_blink_pattern() {
-    while (true) {
-        for (int i = 0; i < 8; i++) {
-            byte dato = 1 << i;
-            byte dato_2 = 1 << (7 - i);
-
-            shiftOut(entrada, reloj_desplazamiento, MSBFIRST, dato);
-            shiftOut(entrada, reloj_desplazamiento, MSBFIRST, dato_2);
-
-            digitalWrite(reloj_salida, HIGH);
-            delay(100);
-            digitalWrite(reloj_salida, LOW);
-        }
-    }
-}
 
 void create_cloud_pattern() {
     byte dato = B11001100;
@@ -220,4 +205,12 @@ void create_cloud_pattern() {
         delay(100);
         digitalWrite(reloj_salida, LOW);
     }
+}
+
+void clean_patterns() {
+    shiftOut(entrada, reloj_desplazamiento, MSBFIRST, B00000000);
+    shiftOut(entrada, reloj_desplazamiento, MSBFIRST, 0);
+
+    digitalWrite(reloj_salida, HIGH);
+    digitalWrite(reloj_salida, LOW);
 }
