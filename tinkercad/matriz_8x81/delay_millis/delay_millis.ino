@@ -7,11 +7,7 @@ int contador = 0;
 
 void delay_millis() {
     if (!tiempo_completado) {
-        Serial.print("Cuantas iteraciones desea: ");
-
-        while (!Serial.available()) {}
-        cantidad_iteraciones = Serial.read() - '0';
-        Serial.println(cantidad_iteraciones);
+        cantidad_iteraciones = 4;
 
         Serial.print("Ingrese tiempo en segundos para retardar los patrones (0-9): ");
 
@@ -24,7 +20,19 @@ void delay_millis() {
     }
 
     if (tiempo_completado && (millis() - tiempo_inicial >= tiempo_esperado * 1000)) {
-        Serial.println("Paso el tiempo deseado");
+        if (contador == 0) {
+            mostrador(create_first_pattern);
+            clean_patterns();
+        } else if (contador == 1) {
+            mostrador(create_second_pattern);
+            clean_patterns();
+        } else if (contador == 2) {
+            mostrador(create_third_pattern);
+            clean_patterns();
+        } else if (contador == 3) {
+            mostrador(create_fourth_pattern);
+            clean_patterns();
+        }
         tiempo_inicial = millis();
         contador++;
 
