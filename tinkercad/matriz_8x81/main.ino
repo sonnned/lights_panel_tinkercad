@@ -135,14 +135,11 @@ void create_first_pattern() {
 
 
 void create_second_pattern() {
-  //DP
   byte dato = B10000000;
-  //habilita filas
-  byte dato_2 = B01111111;
-  //DS
+  byte dato_2 = B01111111; // B10000000 -> B01000000 -> B10111111
+
   byte dato_3 = B10000000;
   byte dato_4 = B11111110;
-  int counter = 0;
   
   for (int i = 0; i < 8; i++){
     for (int j = 0; j < 8; j++) {
